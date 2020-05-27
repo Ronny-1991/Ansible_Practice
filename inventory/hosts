@@ -1,0 +1,9 @@
+[web]
+node1
+
+[dev]
+node2
+
+[demo:children]
+web
+dev
