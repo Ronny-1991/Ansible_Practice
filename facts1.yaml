@@ -1,0 +1,15 @@
+- name: example of gathering fact and writing in motd files at managed nodes
+  hosts: all
+  become: true
+
+  tasks:
+   - name: copy kernal version into motd file
+     copy: 
+      content: "{{ ansible_kernel }}"
+      dest: /etc/motd
+  
+   - name: append hostname to motd file
+     lineinfile: 
+       line: "{{ ansible_hostname }}"
+       dest: /etc/motd 
+ 

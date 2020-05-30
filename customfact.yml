@@ -1,0 +1,8 @@
+- name: to get cutome fact from nodes
+  hosts: all
+  become: true
+  tasks:
+    - name: write the custom fact value to motd
+      lineinfile: 
+         line: "{{ ansible_local.custom.package.web_pkg }}"
+         dest: /etc/motd
