@@ -7,3 +7,8 @@ node2
 [demo:children]
 web
 dev
+
+[demo:vars]
+ansible_connection = ssh
+ansible_user = ansible
+ansible_ssh_pass = ansible

@@ -1,0 +1,14 @@
+--- 
+
+- name: configure httpd.conf file
+  copy:
+   src: httpd.conf
+   dest: /etc/httpd/conf/httpd.conf
+  notify:
+    - restart apache service
+
+- name: copy index.html file to node
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+

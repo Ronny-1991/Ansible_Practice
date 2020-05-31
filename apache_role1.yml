@@ -1,0 +1,5 @@
+- name: installing apache from role apache
+  hosts: demo
+  become: true
+  roles:
+   - apache
